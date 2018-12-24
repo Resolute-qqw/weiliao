@@ -11,12 +11,12 @@ class Relationship extends Model
     public $timestamps = false;
     protected $fillable = ['user_id','request_id'];
 
-    public function newFriend(){
+    public static function newFriend(){
         // 连接user表 查询当前用户 被发送的请求 
         $data = DB::table('relationships as r')
-        ->select('username','account_number','face','user_id','remarks','state','send_time')
-        ->where("request_id",session('user_id'))
+        ->select('u.username','u.account_number','u.face','r.user_id','r.remarks','r.state','r.send_time')
         ->join('users as u','r.user_id','u.id')
+        ->where("r.request_id",session('user_id'))
         ->get();
         return $data;
     }   

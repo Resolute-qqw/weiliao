@@ -12,17 +12,21 @@
 	<link rel="stylesheet" href="/css/swiper-3.4.1.min.css" />
 	<link rel="stylesheet" href="/css/layout.css" />
 	
-	<script src="/js/jquery-1.9.1.min.js"></script>
+	<script src="/js/jquery.min.js"></script>
 	<script src="/js/zepto.min.js"></script>
 	<script src="/js/fontSize.js"></script>
 	<script src="/js/swiper-3.4.1.min.js"></script>
 	<script src="/js/wcPop/wcPop.js"></script>
-	
+	<style>
+		#J__addrFriendList li{
+			display: none;
+		}
+		#J__addrFriendList li:first-child{
+			display: block;
+		}
+	</style>
 </head>
 <body>
-	@if(session('tips'))
-		<script>alert('{{session('tips')}}');</script>
-	@endif
 	<!-- <>微聊主容器 -->
 	<div class="wechat__panel clearfix">
 		<div class="wc__home-wrapper flexbox flex__direction-column">
@@ -149,67 +153,86 @@
 										</li>
 										<li id="A">
 											<h2 class="initial wc__borT">A</h2>
-											<div class="row flexbox flex-alignc wc__material-cell">
-												<img class="uimg" src="./images/uimg/u__chat-img09.jpg" /><span class="name flex1">Aster</span>
-											</div>
-											<div class="row flexbox flex-alignc wc__material-cell">
-												<img class="uimg" src="./images/uimg/u__chat-img01.jpg" /><span class="name flex1">Alibaba-马云</span>
-											</div>
+											
 										</li>
 										<li id="B">
 											<h2 class="initial wc__borT">B</h2>
-											<div class="row flexbox flex-alignc wc__material-cell">
-												<img class="uimg" src="./images/uimg/u__chat-img02.jpg" /><span class="name flex1">马蓉 ▪ ☀☼㈱</span>
-											</div>
-											<div class="row flexbox flex-alignc wc__material-cell">
-												<img class="uimg" src="./images/uimg/u__chat-img03.jpg" /><span class="name flex1">周杰伦-Jay</span>
-											</div>
-											<div class="row flexbox flex-alignc wc__material-cell">
-												<img class="uimg" src="./images/uimg/u__chat-img10.jpg" /><span class="name flex1">Bear</span>
-											</div>
+											
 										</li>
 										<li id="C">
 											<h2 class="initial wc__borT">C</h2>
-											<div class="row flexbox flex-alignc wc__material-cell">
-												<img class="uimg" src="./images/uimg/u__chat-img15.jpg" /><span class="name flex1">CC_李嘉诚</span>
-											</div>
-											<div class="row flexbox flex-alignc wc__material-cell">
-												<img class="uimg" src="./images/uimg/u__chat-img05.jpg" /><span class="name flex1">雷军</span>
-											</div>
-											<div class="row flexbox flex-alignc wc__material-cell">
-												<img class="uimg" src="./images/uimg/u__chat-img04.jpg" /><span class="name flex1">张小龙</span>
-											</div>
+							
 										</li>
 										<li id="D">
 											<h2 class="initial wc__borT">D</h2>
-											<div class="row flexbox flex-alignc wc__material-cell">
-												<img class="uimg" src="./images/uimg/u__chat-img06.jpg" /><span class="name flex1">李彦宏-Robin</span>
-											</div>
-											<div class="row flexbox flex-alignc wc__material-cell">
-												<img class="uimg" src="./images/uimg/u__chat-img07.jpg" /><span class="name flex1">刘强东</span>
-											</div>
 										</li>
 										<li id="E">
 											<h2 class="initial wc__borT">E</h2>
-											<div class="row flexbox flex-alignc wc__material-cell">
-												<img class="uimg" src="./images/uimg/u__chat-img08.jpg" /><span class="name flex1">Lm杨幂幂</span>
-											</div>
-											<div class="row flexbox flex-alignc wc__material-cell">
-												<img class="uimg" src="./images/uimg/u__chat-img11.jpg" /><span class="name flex1">Wqq_王巧巧</span>
-											</div>
-											<div class="row flexbox flex-alignc wc__material-cell">
-												<img class="uimg" src="./images/uimg/u__chat-img12.jpg" /><span class="name flex1">杨迪</span>
-											</div>
 										</li>
 										<li id="F">
 											<h2 class="initial wc__borT">F</h2>
-											<div class="row flexbox flex-alignc wc__material-cell">
-												<img class="uimg" src="./images/uimg/u__chat-img13.jpg" /><span class="name flex1">wuli凡凡</span>
-											</div>
-											<div class="row flexbox flex-alignc wc__material-cell">
-												<img class="uimg" src="./images/uimg/u__chat-img14.jpg" /><span class="name flex1">Nice奶思</span>
-											</div>
 										</li>
+										<li id="G">
+											<h2 class="initial wc__borT">G</h2>
+										</li>
+										<li id="H">
+											<h2 class="initial wc__borT">H</h2>
+										</li>
+										<li id="I">
+											<h2 class="initial wc__borT">I</h2>
+										</li>
+										<li id="J">
+											<h2 class="initial wc__borT">J</h2>
+										</li>
+										<li id="K">
+											<h2 class="initial wc__borT">K</h2>
+										</li>
+										<li id="L">
+											<h2 class="initial wc__borT">L</h2>
+										</li>
+										<li id="M">
+											<h2 class="initial wc__borT">M</h2>
+										</li>
+										<li id="N">
+											<h2 class="initial wc__borT">N</h2>
+										</li>
+										<li id="O">
+											<h2 class="initial wc__borT">O</h2>
+										</li>
+										<li id="P">
+											<h2 class="initial wc__borT">P</h2>
+										</li>
+										<li id="Q">
+											<h2 class="initial wc__borT">Q</h2>
+										</li>
+										<li id="R">
+											<h2 class="initial wc__borT">R</h2>
+										</li>
+										<li id="S">
+											<h2 class="initial wc__borT">S</h2>
+										</li>
+										<li id="T">
+											<h2 class="initial wc__borT">T</h2>
+										</li>
+										<li id="U">
+											<h2 class="initial wc__borT">U</h2>
+										</li>
+										<li id="V">
+											<h2 class="initial wc__borT">V</h2>
+										</li>
+										<li id="W">
+											<h2 class="initial wc__borT">W</h2>
+										</li>
+										<li id="X">
+											<h2 class="initial wc__borT">X</h2>
+										</li>
+										<li id="Y">
+											<h2 class="initial wc__borT">Y</h2>
+										</li>
+										<li id="Z">
+											<h2 class="initial wc__borT">Z</h2>
+										</li>
+										
 									</ul>
 								</div>
 							</div>
@@ -251,7 +274,7 @@
 								<div class="wc__explore-list" id="J__exploreList">
 									<ul class="clearfix">
 										<li>
-											<div class="item flexbox flex-alignc wc__material-cell" routeUrl="微友圈.html">
+											<div class="item flexbox flex-alignc wc__material-cell" routeUrl="{{route('friends')}}">
 												<img class="icon" src="./images/icon__explore-img01.png" /><span class="txt flex1">朋友圈</span><div class="notice wc__arr"><img src="./images/uimg/u__chat-img14.jpg" /><em class="wc__badge wc__badge-dot"></em></div>
 											</div>
 										</li>
@@ -307,6 +330,7 @@
 												<img class="icon" src="./images/icon__uc-img04.png" /><span class="txt flex1">设置</span>
 											</div>
 										</li>
+										
 									</ul>
 								</div>
 							</div>
@@ -323,11 +347,13 @@
 						<li class="flex1"><i class="ico i2"></i><span>通讯录</span></li>
 						<li class="flex1"><i class="ico i3"><em class="wc__badge wc__badge-dot"></em></i><span>探索</span></li>
 						<li class="flex1"><i class="ico i4"></i><span>我</span></li>
+
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
+	
 	
 	
 	<!-- …… 顶部快捷弹窗.Start -->
@@ -470,6 +496,73 @@
 				});
 			});
 		});
+
+		// 将字符串的首个单词提取出来
+		var array = {!!$names!!};
+		var users = {!!$data!!}
+		console.log(users)
+
+		array.sort(
+            function compareFunction(param1, param2) {
+                return param1.localeCompare(param2);
+            }
+        );
+        function pySegSort(arr) {
+            if(!String.prototype.localeCompare)
+                return null;
+            
+            var letters = "aabcdefghjklmnopqrstwxyz".split('');
+            var zh = "啊芭擦搭蛾发噶哈击喀垃妈拿哦啪期然撒塌挖昔压匝座".split('');
+            var segs = [];
+            var curr;
+            letters.forEach(function(item,i){
+                curr = {letter: item, data:[]};
+                arr.forEach(function(item2){
+                    if((!zh[i-1] || zh[i-1].localeCompare(item2) <= 0) && item2.localeCompare(zh[i]) == -1) {
+                        curr.data.push(item2);
+                    }
+                });
+                if(curr.data.length) {
+					segs.push(curr);
+                    curr.data.sort(function(a,b){
+                        return a.localeCompare(b);
+                    });
+					
+                }
+            });
+            return segs;
+        }
+        let data = pySegSort(array)
+		var userinfo = [];
+		console.log(data)
+		data.forEach(function(item,i){
+			// 此处需要大量修改 
+			if(item.data.length>1){
+				item.data.forEach(function(item2,i2){
+					userinfo.push({letter:item.letter,data:item2})
+				})
+			}else{
+				userinfo.push({letter:item.letter,data:item.data[0]})
+			}
+			
+		})
+		console.log(userinfo)
+		// 循环处理过的数据
+		$.each(userinfo,function (index,vaule,arr) {
+			let id = "#"+vaule['letter'].toUpperCase()
+			// 查询是否存在首字母的ID A。。B等
+			if($(id)){
+				$(id).css("display","block");
+				// 把相应的数据往里面插入
+				let str = `<a href="{{route('chat')}}?friend_id=`+users[vaule['data'].slice(-1)]['friend_id']+`">
+								<div class="row flexbox flex-alignc wc__material-cell">
+									<img class="uimg" src="`+users[vaule['data'].slice(-1)]['face']+`" /><span class="name flex1">`+users[vaule['data'].slice(-1)]['username']+`</span>
+								</div>
+							</a>`
+				$(id).append(str)
+			}
+		})
+
 	</script>
 	
 </body>

@@ -30,7 +30,7 @@
 			<div class="wc__headerBar fixed">
 				<div class="inner flexbox">
 					<a class="back splitline" href="javascript:;" onclick="history.back(-1);"></a>
-					<h2 class="barTit flex1">张小龙</h2>
+					<h2 class="barTit flex1">{{$user->username}}</h2>
 					<a class="barIco u-one" href="javascript:;"></a>
 				</div>
 			</div>
@@ -38,11 +38,11 @@
 			<div class="wc__chatMsg-panel flex1">
 				<div class="chatMsg-cnt">
 					<ul class="clearfix" id="J__chatMsgList">
-						<li class="notice"><span>你已经添加了张小龙，现在可以开始聊天了。</span></li>
+						<li class="notice"><span>你已经添加了{{$user->username}}，现在可以开始聊天了。</span></li>
 						<li class="time"><span>2017年12月31日 晚上22:30</span></li>
 						<!-- 别人-->
 						<li class="others">
-							<a class="avatar" href="{{route('friendInfo')}}"><img src="/images/uimg/u__chat-img04.jpg" /></a>
+							<a class="avatar" href="{{route('friendInfo')}}"><img src="{{$user->face}}" /></a>
 							<div class="content">
 								<div class="msg">
 									hello 美女，晚上好，最近过的还好吧！！！ <img class="face" src="/images/emotion/face01/10.png"><img class="face" src="/images/emotion/face01/63.png"><img class="face" src="/images/emotion/face01/75.png">
@@ -56,10 +56,10 @@
 									么么哒，张总发个红包呗！<img class="face" src="/images/emotion/face01/92.png">
 								</div>
 							</div>
-							<a class="avatar" href="{{route('friendInfo')}}"><img src="/images/uimg/u__chat-img14.jpg" /></a>
+							<a class="avatar" href="{{route('friendInfo')}}"><img src="{{$me->face}}" /></a>
 						</li>
 						<li class="others">
-							<a class="avatar" href="{{route('friendInfo')}}"><img src="/images/uimg/u__chat-img04.jpg" /></a>
+							<a class="avatar" href="{{route('friendInfo')}}"><img src="{{$user->face}}" /></a>
 							<div class="content">
 								<div class="msg">
 									晚上好，我还在景区度假呢，去谈了一个项目！ <img class="face" src="/images/emotion/face01/61.png">
@@ -67,7 +67,7 @@
 							</div>
 						</li>
 						<li class="others">
-							<a class="avatar" href="{{route('friendInfo')}}"><img src="/images/uimg/u__chat-img04.jpg" /></a>
+							<a class="avatar" href="{{route('friendInfo')}}"><img src="{{$user->face}}" /></a>
 							<div class="content">
 								<div class="msg picture">
 									<img class="img__pic" src="/images/placeholder/wchat__img03.jpg" />
@@ -76,7 +76,7 @@
 						</li>
 						<li class="time"><span>1月1日 早上02:00</span></li>
 						<li class="others">
-							<a class="avatar" href="{{route('friendInfo')}}"><img src="/images/uimg/u__chat-img04.jpg" /></a>
+							<a class="avatar" href="{{route('friendInfo')}}"><img src="{{$user->face}}" /></a>
 							<div class="content">
 								<div class="msg">
 									又到了夜深人静的时候，好安静。<img class="face" src="/images/emotion/face01/30.png">
@@ -89,7 +89,7 @@
 									这么晚还么睡啊！<img class="face" src="/images/emotion/face01/74.png">
 								</div>
 							</div>
-							<a class="avatar" href="{{route('friendInfo')}}"><img src="/images/uimg/u__chat-img14.jpg" /></a>
+							<a class="avatar" href="{{route('friendInfo')}}"><img src="{{$me->face}}" /></a>
 						</li>
 						<li class="me">
 							<div class="content">
@@ -98,42 +98,26 @@
 								</div>
 							</div>
 							<a class="avatar" href="{{route('friendInfo')}}">
-								<img src="/images/uimg/u__chat-img14.jpg" />
+								<img src="{{$me->face}}" />
 							</a>
 						</li>
 						<li class="time"><span>2月25日 早上09:48</span></li>
 						<li class="others">
-							<a class="avatar" href="{{route('friendInfo')}}"><img src="/images/uimg/u__chat-img04.jpg" /></a>
+							<a class="avatar" href="{{route('friendInfo')}}"><img src="{{$user->face}}" /></a>
 							<div class="content">
 								<div class="msg">
 									早上好，这次微聊线下活动的视频及PPT预计明天可以公开啦 <img class="face" src="/images/emotion/face01/4.png">
 								</div>
 							</div>
 						</li>
-						<li class="time"><span>"张小龙" 撤回了一条消息</span></li>
+						<li class="time"><span>"{{$user->username}}" 撤回了一条消息</span></li>
 						<li class="others">
-							<a class="avatar" href="{{route('friendInfo')}}"><img src="/images/uimg/u__chat-img04.jpg" /></a>
+							<a class="avatar" href="{{route('friendInfo')}}"><img src="{{$user->face}}" /></a>
 							<div class="content">
 								<div class="msg video">
 									<img class="img__video" src="/images/placeholder/wchat__video02-poster.jpg" videoUrl="/images/placeholder/wchat__video02-Y7qk5uVcNcFJIY8O4mKzDw.mp4" />
 								</div>
 							</div>
-						</li>
-						<li class="me">
-							<div class="content">
-								<div class="msg picture">
-									<img class="img__pic" src="/images/placeholder/wchat__img01.jpg" />
-								</div>
-							</div>
-							<a class="avatar" href="{{route('friendInfo')}}"><img src="/images/uimg/u__chat-img14.jpg" /></a>
-						</li>
-						<li class="me">
-							<div class="content">
-								<div class="msg">
-									无聊( ⊙o⊙ )哇，自己爆照一张，我是有多自恋，哈哈哈！<img class="face" src="/images/emotion/face01/72.png">
-								</div>
-							</div>
-							<a class="avatar" href="{{route('friendInfo')}}"><img src="/images/uimg/u__chat-img14.jpg" /></a>
 						</li>
 					</ul>
 				</div>
@@ -754,7 +738,7 @@
 							<div class="content">\
 								<div class="msg lgface">'+ _img + '</div>\
 							</div>\
-							<a class="avatar" href="微聊(好友主页).html"><img src="/images/uimg/u__chat-img14.jpg" /></a>\
+							<a class="avatar" href="微聊(好友主页).html"><img src="{{$me->face}}" /></a>\
 						</li>'
 					].join("");
 					$chatMsgList.append(_tpl);
@@ -783,7 +767,7 @@
 						<div class="content">\
 							<div class="msg">'+ html +'</div>\
 						</div>\
-						<a class="avatar" href="微聊(好友主页).html"><img src="/images/uimg/u__chat-img14.jpg" /></a>\
+						<a class="avatar" href="微聊(好友主页).html"><img src="{{$me->face}}" /></a>\
 					</li>'
 				].join("");
 				$chatMsgList.append(msgTpl);

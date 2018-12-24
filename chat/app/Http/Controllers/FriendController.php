@@ -50,21 +50,32 @@ class FriendController extends Controller
 
     }
 
+    // 好友请求
     public function newFriend(){
-        $relationship = new Relationship;
         // 获取当前用户的好友请求
-        $data = $relationship->newFriend();
-        
+        $data = Relationship::newFriend();
+
         return view("friend.newFriend",[
             'data'=>$data
         ]);
     }
+    
+    // 同意好友
     public function ajaxAgreeFriend(Request $req){
         // 添加成功
         // 更改数据库好友请求状态 user_id 发送人ID  request_id 接受人ID
         $state = Relationship::where('user_id', $req->user_id)
         ->where('request_id', $req->request_id)
         ->update(['state' => 1]);
+        // 查询 自己是否给对方发过消息 
+        $user = Relationship::where('user_id', $req->request_id)
+        ->where('request_id', $req->user_id)
+        ->first();
+        // 如果有 则将消息状态改为通过
+        if($user){
+            Relationship::where('user_id',$req->request_id)->where('request_id',$req->user_id)->update(['state' => 1]); 
+        }
+
         // 查询好友表是否已经有了关系
         $contacts = Contacts::where("user_id",$req->user_id)->where("friend_id",$req->request_id)->first();
         
@@ -73,6 +84,7 @@ class FriendController extends Controller
             Contacts::create([
                 'user_id' => $req->user_id,
                 'friend_id' => $req->request_id,
+                'state'=>1
             ]);
             
         }else{
@@ -90,6 +102,7 @@ class FriendController extends Controller
             Contacts::create([
                 'user_id' => $req->request_id,
                 'friend_id' => $req->user_id,
+                'state'=>1
             ]);
             
         }else{
